@@ -1,5 +1,5 @@
 var mocha = require('mocha');
-var should = require('chai').should();
+var expect = require('chai').expect;
 var redis = require('../../services/redis').configure();
 
 describe('redis service', function() {
@@ -11,9 +11,9 @@ describe('redis service', function() {
         var client = redis.client;
 
         client.set(key, value, function(err, result) {
-            'OK'.should.equal(result);
+            expect(result).to.equal('OK');
             client.get(key, function(err, result) {
-                value.should.equal(result);
+                expect(result).to.equal(value);
                 done();
             });
         });
