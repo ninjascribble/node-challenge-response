@@ -4,7 +4,7 @@ var redis = require('../../services/redis').configure();
 
 describe('redis service', function() {
 
-    it('can set and retrieve string values', function(done) {
+    it('exposes a working redis client', function(done) {
 
         var key = 'foo';
         var value = 'bar';
