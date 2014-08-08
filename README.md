@@ -1,4 +1,4 @@
 node-challenge-response
 =======================
 
-Challenge / Response auth demo in node
+Challenge / Response auth demo in node, foo!
